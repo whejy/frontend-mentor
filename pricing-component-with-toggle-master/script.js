@@ -17,20 +17,31 @@ const createPricePlans = () => {
   );
 };
 
-const generateCardHtml = (plan) => {
+const generateCardHtml = (plan, i) => {
+  let buttonColor;
+  let cardColor;
+
+  if (i % 2 === 0) {
+    buttonColor = 'primary-color';
+    cardColor = 'white-color';
+  } else {
+    buttonColor = 'white-color';
+    cardColor = 'primary-color';
+  }
+
   let html = `
     <div class="col">
-        <div class="card" style="width: auto">
+        <div class="card ${cardColor}" style="width: auto">
             <div class="card-body"> 
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                         <div>${plan.type}</div>
                         <h5 class="card-title">${plan.monthlyCost}</h5>
                     </li>
-                    <li class="list-group-item">${plan.storage}</li>
+                    <li class="list-group-item">${plan.storage} Storage</li>
                     <li class="list-group-item">${plan.users} Users Allowed</li>
                     <li class="list-group-item">Send up to ${plan.send}</li>
-                    <li class="list-group-item"><button type="button" class="btn btn-primary">Learn More</button></li>
+                    <li class="list-group-item"><button type="button" class="btn btn-primary ${buttonColor}">Learn More</button></li>
                 </ul>
             </div>
         </div>
@@ -43,8 +54,8 @@ addEventListener('DOMContentLoaded', () => {
   let content = '';
   let cards = document.getElementById('cards');
 
-  pricePlans.forEach((plan) => {
-    content += generateCardHtml(plan);
+  pricePlans.forEach((plan, i) => {
+    content += generateCardHtml(plan, i);
   });
   cards.innerHTML = content;
 });

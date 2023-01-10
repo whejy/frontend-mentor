@@ -1,6 +1,31 @@
+body {
+    font-size: 15px;
+    font-family: Montserrat;
+    font-weight: 700;
+    background: hsl(240, 78%, 98%);
+}
+
+.btn {
+    border: none;
+    background-color: white;
+}
+
+.list-group-item {
+    background: transparent
+}
+
 .container {
     height: 100vh;
     outline: solid 1px blue;
+}
+
+.primary-color {
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.white-color {
+    background-color: white;
+    color: hsl(237, 63%, 64%)
 }
 
 #cards {
