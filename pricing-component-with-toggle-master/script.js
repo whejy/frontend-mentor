@@ -18,15 +18,23 @@ const createPricePlans = () => {
 };
 
 const generateCardHtml = (plan) => {
-  let html = `<div class="col">
-    <div class="card" style="width: auto"><div class="card-header">${plan.type} ${plan.monthlyCost}</div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">${plan.storage}</li>
-      <li class="list-group-item">${plan.users} Users Allowed</li>
-      <li class="list-group-item">Send up to ${plan.send}</li>
-    </ul>
-    <div class="card-footer">Learn More</div>
-  </div></div></div>`;
+  let html = `
+    <div class="col">
+        <div class="card" style="width: auto">
+            <div class="card-body"> 
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div>${plan.type}</div>
+                        <h5 class="card-title">${plan.monthlyCost}</h5>
+                    </li>
+                    <li class="list-group-item">${plan.storage}</li>
+                    <li class="list-group-item">${plan.users} Users Allowed</li>
+                    <li class="list-group-item">Send up to ${plan.send}</li>
+                    <li class="list-group-item"><button type="button" class="btn btn-primary">Learn More</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>`;
   return html;
 };
 

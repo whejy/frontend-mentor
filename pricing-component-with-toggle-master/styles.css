@@ -4,7 +4,9 @@
 }
 
 #cards {
-    height: 100%;
+    height: 75%;
+    width: 75%;
+    margin: auto;
     outline: solid 1px red;
 }
 
