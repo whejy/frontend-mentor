@@ -6,12 +6,38 @@ body {
 }
 
 .btn {
-    border: none;
-    background-color: white;
+    margin-top: 10px;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.primary-btn {
+    border-color: hsl(236, 72%, 79%);
+}
+
+.primary-btn:hover {
+    background: transparent;
+    border-color:hsl(237, 63%, 64%) ;
+    color: hsl(237, 63%, 64%);
+}
+
+.white-btn {
+    border-color: white;
+}
+
+.white-btn:hover {
+    background: transparent;
+    border-color: white;
+}
+
+.card-title {
+    padding-top: 20px;
+    font-weight: bolder;
 }
 
 .list-group-item {
-    background: transparent
+    background: transparent;
+    color: hsl(232, 13%, 33%);
 }
 
 .container {
@@ -19,11 +45,15 @@ body {
     outline: solid 1px blue;
 }
 
-.primary-color {
+.primary-background {
     background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 }
 
-.white-color {
+.white-text > li {
+    color: white
+}
+
+.white-background {
     background-color: white;
     color: hsl(237, 63%, 64%)
 }
@@ -33,6 +63,15 @@ body {
     width: 75%;
     margin: auto;
     outline: solid 1px red;
+}
+
+.primary-card {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card {
+    box-shadow: -1px 4px 19px 1px rgba(163,168,240,0.23);
 }
 
 .attribution {

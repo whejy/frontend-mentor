@@ -20,28 +20,36 @@ const createPricePlans = () => {
 const generateCardHtml = (plan, i) => {
   let buttonColor;
   let cardColor;
+  let textColor;
 
   if (i % 2 === 0) {
-    buttonColor = 'primary-color';
-    cardColor = 'white-color';
+    buttonColor = 'primary-background primary-btn';
+    cardColor = 'white-background';
   } else {
-    buttonColor = 'white-color';
-    cardColor = 'primary-color';
+    buttonColor = 'white-background white-btn';
+    cardColor = 'primary-background primary-card';
+    textColor = 'white-text';
   }
 
   let html = `
     <div class="col">
         <div class="card ${cardColor}" style="width: auto">
             <div class="card-body"> 
-                <ul class="list-group list-group-flush">
+                <ul class="list-group list-group-flush ${textColor}">
                     <li class="list-group-item">
                         <div>${plan.type}</div>
-                        <h5 class="card-title">${plan.monthlyCost}</h5>
+                        <h2 class="card-title">${plan.monthlyCost}</h5>
                     </li>
                     <li class="list-group-item">${plan.storage} Storage</li>
                     <li class="list-group-item">${plan.users} Users Allowed</li>
                     <li class="list-group-item">Send up to ${plan.send}</li>
-                    <li class="list-group-item"><button type="button" class="btn btn-primary ${buttonColor}">Learn More</button></li>
+                    <li class="list-group-item">
+                        <div class="d-grid gap-2">
+                            <button type="button" class="btn btn-sm btn-primary ${buttonColor}">
+                                LEARN MORE
+                            </button>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
