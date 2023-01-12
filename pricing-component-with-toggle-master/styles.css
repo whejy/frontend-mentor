@@ -1,14 +1,18 @@
 body {
     font-size: 15px;
     font-family: Montserrat;
-    font-weight: 700;
     background: hsl(240, 78%, 98%);
+}
+
+h6 {
+    padding-top: 2em;
+    padding-bottom: 1em;
+    color: hsl(233, 13%, 49%);
 }
 
 .btn {
     margin-top: 10px;
-    font-size: smaller;
-    font-weight: bold;
+    font-size: 10px;
 }
 
 .form-switch {
@@ -51,6 +55,8 @@ body {
 .form-check {
     min-height: 0;
     margin-bottom: 0;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
 .form-check-input:hover {
@@ -95,6 +101,10 @@ body {
     --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
 
+.form-check-label {
+    color: hsl(234, 14%, 74%);
+}
+
 .primary-background {
     background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 }
@@ -108,16 +118,11 @@ body {
     color: hsl(237, 63%, 64%)
 }
 
-h6 {
-    font-weight: bold;
-    color: hsl(232, 13%, 33%);
-}
 
 #cards {
-    height: 75%;
+    height: 70%;
     width: 75%;
     margin: auto;
-    outline: solid 1px red;
 }
 
 .primary-card {
