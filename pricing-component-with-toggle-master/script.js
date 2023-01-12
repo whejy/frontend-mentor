@@ -6,7 +6,7 @@ function Plan(type, monthlyCost, annualCost, storage, users, send) {
   this.annualCost = `$${annualCost}`;
   this.storage = storage;
   this.users = users;
-  this.send = `${send} GB`;
+  this.send = send;
 }
 
 const createPricePlans = () => {
@@ -42,7 +42,7 @@ const generateCardHtml = (plan, i) => {
                     </li>
                     <li class="list-group-item">${plan.storage} Storage</li>
                     <li class="list-group-item">${plan.users} Users Allowed</li>
-                    <li class="list-group-item">Send up to ${plan.send}</li>
+                    <li class="list-group-item">Send up to ${plan.send} GB</li>
                     <li class="list-group-item">
                         <div class="d-grid gap-2">
                             <button type="button" class="btn btn-sm btn-primary ${buttonColor}">
