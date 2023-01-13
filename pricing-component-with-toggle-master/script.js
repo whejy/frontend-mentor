@@ -34,8 +34,8 @@ const generateCardHtml = (plan, i) => {
   }
 
   let html = `
-    <div class="col">
-        <div class="card ${cardColor}" style="width: auto">
+    <div class="col-lg-4 col-sm-12 test">
+        <div class="card ${cardColor}">
             <div class="card-body"> 
                 <ul class="list-group list-group-flush ${textColor}">
                     <li class="list-group-item">

@@ -4,10 +4,6 @@ body {
     background: hsl(240, 78%, 98%);
 }
 
-.container {
-    height: 100vh;
-}
-
 h6 {
     padding-top: 2em;
     padding-bottom: 1em;
@@ -35,7 +31,7 @@ h6 {
     margin-top: 0;
 }
 
-.form-check-input:active {
+.form-check-input:active, .form-check-input:hover {
     filter: opacity(70%);
 }
 
@@ -72,9 +68,44 @@ h6 {
 }
 
 #cards {
-    height: 70%;
-    width: 75%;
     margin: auto;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+@media (min-width: 390px) {
+    #cards {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (min-width: 576px) {
+    #cards {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media (min-width: 768px) {
+    #cards {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}
+
+@media (min-width: 992px) {
+    #cards {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #cards {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 }
 
 .card {
