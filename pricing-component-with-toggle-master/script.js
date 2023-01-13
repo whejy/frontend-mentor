@@ -1,22 +1,27 @@
 let pricePlans = [];
 
-function Plan(type, monthlyCost, annualCost, storage, users, send) {
-  this.type = type;
-  this.cost = {
-    monthlyCost: monthlyCost,
-    annualCost: annualCost,
-  };
-  this.storage = storage;
-  this.users = users;
-  this.send = send;
+// EDIT PLANS HERE - plan type, monthly cost, annual cost, storage limit, users allowed, send limit (GB)
+const availablePlans = [
+  ['Basic', 19.99, 199.99, '500 GB', 2, 2],
+  ['Professional', 24.99, 249.99, '1 TB', 5, 10],
+  ['Master', 39.99, 399.99, '2 TB', 10, 20],
+];
+
+class Plan {
+  constructor(type, monthlyCost, annualCost, storage, users, send) {
+    this.type = type;
+    this.cost = {
+      monthlyCost: monthlyCost,
+      annualCost: annualCost,
+    };
+    this.storage = storage;
+    this.users = users;
+    this.send = send;
+  }
 }
 
 const createPricePlans = () => {
-  return pricePlans.push(
-    new Plan('Basic', 19.99, 199.99, '500 GB', 2, 3),
-    new Plan('Professional', 24.99, 249.99, '1 TB', 5, 10),
-    new Plan('Master', 39.99, 399.99, '2 TB', 10, 20)
-  );
+  availablePlans.forEach((plan) => pricePlans.push(new Plan(...plan)));
 };
 
 const generateCardHtml = (plan, i) => {
@@ -33,8 +38,8 @@ const generateCardHtml = (plan, i) => {
     textColor = 'white-text';
   }
 
-  let html = `
-    <div class="col-lg-4 col-sm-12 test">
+  let cardHtml = `
+    <div class="col-lg-4 col-sm-12">
         <div class="card ${cardColor}">
             <div class="card-body"> 
                 <ul class="list-group list-group-flush ${textColor}">
@@ -56,7 +61,7 @@ const generateCardHtml = (plan, i) => {
             </div>
         </div>
     </div>`;
-  return html;
+  return cardHtml;
 };
 
 const getCards = (monthly) => {
