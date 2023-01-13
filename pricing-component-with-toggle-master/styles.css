@@ -4,52 +4,18 @@ body {
     background: hsl(240, 78%, 98%);
 }
 
+.container {
+    height: 100vh;
+}
+
 h6 {
     padding-top: 2em;
     padding-bottom: 1em;
     color: hsl(233, 13%, 49%);
 }
 
-.btn {
-    margin-top: 10px;
-    font-size: 10px;
-}
-
 .form-switch {
     display: inline-block;
-}
-
-.primary-btn {
-    border-color: hsl(236, 72%, 79%);
-}
-
-.primary-btn:hover, .primary-btn:active {
-    background: transparent !important;
-    border-color:hsl(237, 63%, 64%) !important;
-    color: hsl(237, 63%, 64%) !important;
-}
-
-.white-btn {
-    border-color: white;
-}
-
-.white-btn:hover, .white-btn:active {
-    background: transparent !important;
-    border-color: white !important;
-}
-
-.card-title {
-    padding-top: 20px;
-    font-weight: bolder;
-}
-
-.list-group-item {
-    background: transparent;
-    color: hsl(232, 13%, 33%);
-}
-
-.container {
-    height: 100vh;
 }
 
 .form-check {
@@ -105,6 +71,55 @@ h6 {
     color: hsl(234, 14%, 74%);
 }
 
+#cards {
+    height: 70%;
+    width: 75%;
+    margin: auto;
+}
+
+.card {
+    box-shadow: -1px 4px 19px 1px rgba(163,168,240,0.23);
+}
+
+.card-title {
+    padding-top: 20px;
+    font-weight: bolder;
+}
+
+.primary-card {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.list-group-item {
+    background: transparent;
+    color: hsl(232, 13%, 33%);
+}
+
+.btn {
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+.primary-btn {
+    border-color: hsl(236, 72%, 79%);
+}
+
+.primary-btn:hover, .primary-btn:active {
+    background: transparent !important;
+    border-color:hsl(237, 63%, 64%) !important;
+    color: hsl(237, 63%, 64%) !important;
+}
+
+.white-btn {
+    border-color: white;
+}
+
+.white-btn:hover, .white-btn:active {
+    background: transparent !important;
+    border-color: white !important;
+}
+
 .primary-background {
     background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 }
@@ -116,22 +131,6 @@ h6 {
 .white-background {
     background-color: white;
     color: hsl(237, 63%, 64%)
-}
-
-
-#cards {
-    height: 70%;
-    width: 75%;
-    margin: auto;
-}
-
-.primary-card {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.card {
-    box-shadow: -1px 4px 19px 1px rgba(163,168,240,0.23);
 }
 
 .attribution {

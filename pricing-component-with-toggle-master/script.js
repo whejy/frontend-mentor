@@ -2,8 +2,10 @@ let pricePlans = [];
 
 function Plan(type, monthlyCost, annualCost, storage, users, send) {
   this.type = type;
-  this.monthlyCost = `$${monthlyCost}`;
-  this.annualCost = `$${annualCost}`;
+  this.cost = {
+    monthlyCost: monthlyCost,
+    annualCost: annualCost,
+  };
   this.storage = storage;
   this.users = users;
   this.send = send;
@@ -38,7 +40,7 @@ const generateCardHtml = (plan, i) => {
                 <ul class="list-group list-group-flush ${textColor}">
                     <li class="list-group-item">
                         <div>${plan.type}</div>
-                        <h2 class="card-title">${plan.monthlyCost}</h5>
+                        <h2 class="card-title">$${plan.cost}</h5>
                     </li>
                     <li class="list-group-item">${plan.storage} Storage</li>
                     <li class="list-group-item">${plan.users} Users Allowed</li>
@@ -57,13 +59,28 @@ const generateCardHtml = (plan, i) => {
   return html;
 };
 
-addEventListener('DOMContentLoaded', () => {
-  createPricePlans();
-  let content = '';
+const getCards = (monthly) => {
   let cards = document.getElementById('cards');
+  let content = '';
 
   pricePlans.forEach((plan, i) => {
+    monthly === false
+      ? (plan = { ...plan, cost: plan.cost.annualCost })
+      : (plan = { ...plan, cost: plan.cost.monthlyCost });
     content += generateCardHtml(plan, i);
   });
+
   cards.innerHTML = content;
+};
+
+addEventListener('DOMContentLoaded', () => {
+  createPricePlans();
+  getCards();
+
+  // Toggle monthly/ annual cost
+  document
+    .getElementById('flexSwitchCheckChecked')
+    .addEventListener('click', (e) => {
+      getCards(e.target.checked);
+    });
 });
