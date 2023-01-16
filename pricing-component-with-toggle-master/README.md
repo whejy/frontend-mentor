@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-[Solution URL](https://your-solution-url.com)
+[Solution URL](https://your-solution-url.com)\
 [Live Site](https://pricing-component-with-toggle-five-tau.vercel.app/)
 
 ## My process
@@ -77,5 +77,4 @@ I would still like to improve at CSS.
 
 ## Author
 
-- Website - [John Wheldale](https://github.com/whejy)
 - Frontend Mentor - [@whejy](https://www.frontendmentor.io/profile/whejy)
