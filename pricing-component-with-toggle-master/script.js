@@ -29,6 +29,7 @@ const generateCardHtml = (plan, i) => {
   let cardColor;
   let textColor;
 
+  // Alternate card/ button colours
   if (i % 2 === 0) {
     buttonColor = 'primary-background primary-btn';
     cardColor = 'white-background';
