@@ -4,10 +4,11 @@ body {
     background: hsl(240, 78%, 98%);
 }
 
-h6 {
-    padding-top: 2em;
+h1 {
+    padding-top: 1em;
     padding-bottom: 1em;
     color: hsl(233, 13%, 49%);
+    text-align: center;
 }
 
 .form-switch {
