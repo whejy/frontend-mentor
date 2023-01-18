@@ -45,8 +45,8 @@ const generateCardHtml = (plan, i) => {
             <div class="card-body"> 
                 <ul class="list-group list-group-flush ${textColor}">
                     <li class="list-group-item">
-                        <div>${plan.type}</div>
-                        <h2 class="card-title">$${plan.cost}</h5>
+                        <div class="card-type">${plan.type}</div>
+                        <h2 class="card-price">$${plan.cost}</h5>
                     </li>
                     <li class="list-group-item">${plan.storage} Storage</li>
                     <li class="list-group-item">${plan.users} Users Allowed</li>

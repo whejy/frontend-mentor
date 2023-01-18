@@ -60,9 +60,12 @@ h1 {
     margin: auto;
     padding-top: 30px;
     padding-bottom: 20px;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    width: 85vw;
 }
 
-@media (min-width: 390px) {
+/* @media (min-width: 390px) {
     #cards {
         padding-left: 50px;
         padding-right: 50px;
@@ -94,16 +97,24 @@ h1 {
     #cards {
         padding-left: 100px;
         padding-right: 100px;
+        max-width: 2000px;
     }
-}
+} */
 
 .card {
     box-shadow: -1px 4px 19px 1px rgba(163,168,240,0.23);
+    border-radius: 20px;
 }
 
-.card-title {
-    padding-top: 20px;
+.card-type {
+    padding: 1vw;
+}
+
+.card-price {
+    padding-top: 1.5vw;
+    padding-bottom: 0.8vw;
     font-weight: bolder;
+    font-size: 3.4vmax;
 }
 
 .primary-card {
@@ -114,11 +125,14 @@ h1 {
 .list-group-item {
     background: transparent;
     color: hsl(232, 13%, 33%);
+    font-size: 0.8vmax;
+    padding: 1.5em;
 }
 
 .btn {
     margin-top: 10px;
-    font-size: 10px;
+    font-size: 1em;
+    border-radius: 10px;
 }
 
 .primary-btn {
