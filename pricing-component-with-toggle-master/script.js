@@ -1,6 +1,6 @@
 let pricePlans = [];
 
-// EDIT PLANS HERE - plan type, monthly cost, annual cost, storage limit, users allowed, send limit (GB)
+// plan type, monthly cost, annual cost, storage limit, users allowed, send limit (GB)
 const availablePlans = [
   ['Basic', 19.99, 199.99, '500 GB', 2, 2],
   ['Professional', 24.99, 249.99, '1 TB', 5, 10],
@@ -40,7 +40,7 @@ const generateCardHtml = (plan, i) => {
   }
 
   let cardHtml = `
-    <div class="col-lg-4 col-sm-12">
+    <div class="col">
         <div class="card ${cardColor}">
             <div class="card-body"> 
                 <ul class="list-group list-group-flush ${textColor}">

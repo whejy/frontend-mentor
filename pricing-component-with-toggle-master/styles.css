@@ -11,164 +11,162 @@ h1 {
     text-align: center;
 }
 
-.form-switch {
-    display: inline-block;
-}
+/* ----- Colours ----- */
 
-.form-check {
-    min-height: 0;
-    margin-bottom: 0;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-}
-
-.form-check-input {
-    background-color: hsl(236, 72%, 79%);
-    border-color: hsl(236, 72%, 79%);
-    margin-top: 0;
-}
-
-.form-check-input:hover {
-    cursor: pointer;
-}
-
-.form-check-input:active, .form-check-input:hover {
-    filter: opacity(70%);
-}
-
-.form-check-input:checked {
-    background-color: hsl(236, 72%, 79%);
-    border-color: hsl(236, 72%, 79%) ;
-}
-
-.form-check > .form-check-input {
-    float: none;
-    height: 1.4em;
-    width: 2.2em;
-}
-
-.form-switch :is(.form-check-input, .form-check-input:checked:focus:active) {
-    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
-    box-shadow: none;
-}
-
-.form-check-label {
-    color: hsl(234, 14%, 74%);
-}
-
-#cards {
-    margin: auto;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    padding-left: 7vw;
-    padding-right: 7vw;
-    width: 85vw;
-}
-
-/* @media (min-width: 390px) {
-    #cards {
-        padding-left: 50px;
-        padding-right: 50px;
+    .primary-background {
+        background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     }
-}
 
-@media (min-width: 576px) {
-    #cards {
-        padding-left: 100px;
-        padding-right: 100px;
+    .white-text > li {
+        color: white
     }
-}
 
-@media (min-width: 768px) {
-    #cards {
-        padding-left: 150px;
-        padding-right: 150px;
+    .white-background {
+        background-color: white;
+        color: hsl(237, 63%, 64%)
     }
-}
 
-@media (min-width: 992px) {
-    #cards {
-        padding-left: 50px;
-        padding-right: 50px;
+/* ----- Toggle button ----- */
+
+    .form-switch {
+        display: inline-block;
     }
-}
 
-@media (min-width: 1200px) {
-    #cards {
-        padding-left: 100px;
-        padding-right: 100px;
-        max-width: 2000px;
+    .form-check {
+        min-height: 0;
+        margin-bottom: 0;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
     }
-} */
 
-.card {
-    box-shadow: -1px 4px 19px 1px rgba(163,168,240,0.23);
-    border-radius: 20px;
-}
+    .form-check-input {
+        background-color: hsl(236, 72%, 79%);
+        border-color: hsl(236, 72%, 79%);
+        margin-top: -15px;
+    }
 
-.card-type {
-    padding: 1vw;
-}
+    .form-check-input:hover {
+        cursor: pointer;
+    }
 
-.card-price {
-    padding-top: 1.5vw;
-    padding-bottom: 0.8vw;
-    font-weight: bolder;
-    font-size: 3.4vmax;
-}
+    .form-check-input:active, .form-check-input:hover {
+        filter: opacity(70%);
+    }
 
-.primary-card {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+    .form-check-input:checked {
+        background-color: hsl(236, 72%, 79%);
+        border-color: hsl(236, 72%, 79%) ;
+    }
 
-.list-group-item {
-    background: transparent;
-    color: hsl(232, 13%, 33%);
-    font-size: 0.8vmax;
-    padding: 1.5em;
-}
+    .form-check > .form-check-input {
+        float: none;
+        height: 3em;
+        width: 5em;
+    }
 
-.btn {
-    margin-top: 10px;
-    font-size: 1em;
-    border-radius: 10px;
-}
+    .form-switch :is(.form-check-input, .form-check-input:checked:focus:active) {
+        --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+        box-shadow: none;
+    }
 
-.primary-btn {
-    border-color: hsl(236, 72%, 79%);
-}
+    .form-check-label {
+        color: hsl(234, 14%, 74%);
+        font-size: 1.5em;
+    }
 
-.primary-btn:hover, .primary-btn:active {
-    background: transparent !important;
-    border-color:hsl(237, 63%, 64%) !important;
-    color: hsl(237, 63%, 64%) !important;
-}
+/* ----- Cards ----- */
 
-.white-btn {
-    border-color: white;
-}
+    #cards {
+        margin: auto;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        width: 90%;
+    }
 
-.white-btn:hover, .white-btn:active {
-    background: transparent !important;
-    border-color: white !important;
-}
+    .card {
+        box-shadow: -1px 4px 19px 1px rgba(163,168,240,0.23);
+        border-radius: 20px;
+    }
 
-.primary-background {
-    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-}
+    .card-type {
+        padding-bottom: 1.8em;
+    }
 
-.white-text > li {
-    color: white
-}
+    .card-price {
+        font-weight: bolder;
+        font-size: 3.1em;
+    }
 
-.white-background {
-    background-color: white;
-    color: hsl(237, 63%, 64%)
-}
+    .list-group-item {
+        background: transparent;
+        color: hsl(232, 13%, 33%);
+        font-size: 1.5em;
+        padding: 1.5em;
+    }
+
+    .btn {
+        margin-top: 10px;
+        font-size: 1em;
+        border-radius: 10px;
+    }
+    
+    .primary-btn {
+        border-color: hsl(236, 72%, 79%);
+    }
+    
+    .primary-btn:hover, .primary-btn:active {
+        background: transparent !important;
+        border-color:hsl(237, 63%, 64%) !important;
+        color: hsl(237, 63%, 64%) !important;
+    }
+    
+    .white-btn {
+        border-color: white;
+    }
+    
+    .white-btn:hover, .white-btn:active {
+        background: transparent !important;
+        border-color: white !important;
+    }
+
+/* ----- Media Queries ----- */
+
+    @media (min-width: 2100px) {
+        .primary-card {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        #cards {
+            width: 70%;
+        }
+        .card-price {
+            font-size: 4em;
+        }
+    }
+
+    @media (max-width: 1650px) {
+        #cards {
+            flex-direction: column;
+            width: 50%;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        #cards {
+            flex-direction: column;
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 800px) {
+        #cards {
+            width: 90%;
+        }
+    }
 
 .attribution {
-    font-size: 11px;
+    margin-top: 50px;
     text-align: center;
   }
   .attribution a {
