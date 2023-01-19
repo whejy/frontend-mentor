@@ -40,43 +40,42 @@ const generateCardHtml = (plan, i) => {
   }
 
   let cardHtml = `
-    <div class="col">
-        <div class="card ${cardColor}">
-            <div class="card-body"> 
-                <ul class="list-group list-group-flush ${textColor}">
-                    <li class="list-group-item">
-                        <div class="card-type">${plan.type}</div>
-                        <h2 class="card-price">$${plan.cost}</h5>
-                    </li>
-                    <li class="list-group-item">${plan.storage} Storage</li>
-                    <li class="list-group-item">${plan.users} Users Allowed</li>
-                    <li class="list-group-item">Send up to ${plan.send} GB</li>
-                    <li class="list-group-item">
-                        <div class="d-grid gap-2">
-                            <button type="button" class="btn btn-sm btn-primary ${buttonColor}">
-                                LEARN MORE
-                            </button>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+      <div class="card ${cardColor}">
+          <div class="card-body"> 
+              <ul class="list-group list-group-flush ${textColor}">
+                  <li class="list-group-item">
+                      <div class="card-type">${plan.type}</div>
+                      <h2 class="card-price">$${plan.cost}</h5>
+                  </li>
+                  <li class="list-group-item">${plan.storage} Storage</li>
+                  <li class="list-group-item">${plan.users} Users Allowed</li>
+                  <li class="list-group-item">Send up to ${plan.send} GB</li>
+                  <li class="list-group-item">
+                      <div class="d-grid gap-2">
+                          <button type="button" class="btn btn-sm btn-primary ${buttonColor}">
+                              LEARN MORE
+                          </button>
+                      </div>
+                  </li>
+              </ul>
+          </div>
     </div>`;
   return cardHtml;
 };
 
 const getCards = (monthly) => {
   let cards = document.getElementById('cards');
-  let content = '';
+  cards.innerHTML = ``;
 
   pricePlans.forEach((plan, i) => {
+    let div = document.createElement('div');
+    div.classList.add('col');
     monthly === false
       ? (plan = { ...plan, cost: plan.cost.annualCost })
       : (plan = { ...plan, cost: plan.cost.monthlyCost });
-    content += generateCardHtml(plan, i);
+    div.innerHTML = generateCardHtml(plan, i);
+    cards.appendChild(div);
   });
-
-  cards.innerHTML = content;
 };
 
 addEventListener('DOMContentLoaded', () => {
