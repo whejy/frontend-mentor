@@ -153,11 +153,11 @@ h1 {
 
     @media (max-width: 1600px) {
         .list-group-item {
-            font-size: 1.2em;
+            font-size: 1em;
         }
 
         .card-price {
-            font-size: 3.1em;
+            font-size: 3em;
         }
     }
 
@@ -180,6 +180,21 @@ h1 {
     @media (max-width: 800px) {
         #cards {
             width: 90%;
+        }
+    }
+
+    @media (max-width: 485px) {
+        .list-group-item {
+            font-size: 3.8vw;
+        }
+
+        .form-check-label {
+            font-size: 4.5vw;
+        }
+
+        .form-check {
+            margin-left: 2.5vw;
+            margin-right: 2.5vw;
         }
     }
 
