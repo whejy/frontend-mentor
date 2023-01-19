@@ -4,4 +4,4 @@ This is a solution to the [Pricing component with toggle challenge on Frontend M
 
 [Live Site](https://pricing-component-with-toggle-five-tau.vercel.app/)
 
-- Frontend Mentor - [@whejy](https://www.frontendmentor.io/profile/whejy)
+Frontend Mentor - [@whejy](https://www.frontendmentor.io/profile/whejy)
