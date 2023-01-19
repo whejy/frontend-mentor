@@ -80,7 +80,6 @@ h1 {
         margin: auto;
         padding-top: 30px;
         padding-bottom: 20px;
-        width: 90%;
     }
 
     .card {
@@ -145,15 +144,22 @@ h1 {
         }
     }
 
-    @media (max-width: 1650px) {
+    @media (max-width: 2099px) {
+
         #cards {
-            flex-direction: column;
-            width: 50%;
+            width: 90%;
         }
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1650px) {
         #cards {
+            width: 40%;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        #cards {
+            flex-direction: column;
             width: 70%;
         }
     }
