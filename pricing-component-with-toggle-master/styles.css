@@ -154,7 +154,6 @@ h1 {
 
     @media (max-width: 1000px) {
         #cards {
-            flex-direction: column;
             width: 70%;
         }
     }
